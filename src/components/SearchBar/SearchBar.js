@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { updateQuery } from "./SearchBarSlice";
 import "./SearchBar.css";
 
@@ -9,7 +9,7 @@ export const SearchBar = () => {
     const q = searchParams.get("q")
     const dispatch = useDispatch()
 
-    useEffect(()=>{dispatch(updateQuery(q))},[q])
+    useEffect(()=>{dispatch(updateQuery(q))},[q,dispatch])
 
     return (
         <div className="search-bar-wrapper">

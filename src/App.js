@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
 import  {fetchPosts}  from "./components/Posts/PostsSlice"
 import { FiltersBar } from './components/FiltersBar/FiltersBar';

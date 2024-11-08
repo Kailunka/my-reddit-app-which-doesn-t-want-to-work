@@ -55,13 +55,6 @@ export const FiltersBar = ({ subreddits }) => {
         dispatch(fetchPosts(selectedSubreddit.value)); // Fetch posts for the selected subreddit
     };
 
-    useEffect(() => {
-        // Clear authors when posts change (e.g., after fetching new posts)
-        if (selectedAuthors.length > 0) {
-            dispatch(updateAuthors([])); // Clear authors selection
-        }
-    }, [posts, dispatch]);
-
     return (
         <div className="filter-bar-container">
             <Selector
