@@ -1,0 +1,100 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+}
+
+.loading-strip {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.mock-post-item-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    box-shadow: -2px 0 5px rgba(211, 211, 211, 0.5), 2px 0 5px rgba(211, 211, 211, 0.5);
+    padding: 2.5rem;
+    background-color: #fff; 
+}
+
+.mock-post-title {
+    width: 100%; /* Width of the title */
+    height: 2.5rem; /* Placeholder height for the title */
+    background-color: #ccc; /* Placeholder color */
+    margin-bottom: 2.5rem; /* Spacing below the title */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.mock-post-image {
+    width: 100%; /* Full width of the post */
+    height: 25rem; /* Placeholder height for the image */
+    background-color: #e0e0e0; /* Placeholder color for the image */
+    border-radius: 3%; /* Similar rounding as actual posts */
+    margin-bottom: 2.5rem; /* Space below the image */
+}
+
+.mock-post-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mock-post-author,
+.mock-post-date {
+    width: 30%; /* Placeholder width for author and date */
+    height: 1rem; /* Placeholder height for author and date */
+    background-color: #ccc; /* Placeholder color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 460px) {
+    .loading-container {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .mock-post-title {
+        width: 100%; /* Full width on mobile */
+        height: 1.5rem; /* Smaller height */
+        margin-bottom: 1rem;
+    }
+
+    .mock-post-image {
+        height: 15rem; /* Adjust image height for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .mock-post-item-container {
+        width: 90%;
+        padding: 2rem; /* Adjust padding for mobile */
+    }
+
+    .mock-post-item-bottom {
+        flex-direction: column; /* Stack author and date */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .mock-post-author,
+    .mock-post-date {
+        width: 100%; /* Full width for author and date on mobile */
+        height: 1.2rem; /* Smaller height */
+        margin-bottom: 0.5rem; /* Space between author and date */
+    }
+}

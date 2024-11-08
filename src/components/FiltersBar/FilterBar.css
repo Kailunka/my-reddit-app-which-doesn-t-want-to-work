@@ -1,0 +1,35 @@
+.filter-bar-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selector-container {
+    transition: all 0.3s ease; 
+    width: 40%;
+    margin-bottom: 1rem; /* Default margin */
+}
+
+.sticky .selector-container {
+    margin-bottom: 0.25rem; /* Decrease margin when sticky */
+    transform: scale(0.9); /* Scale down the selector */
+}
+
+@media (max-width: 460px) {
+    .selector-container{
+        width: 90%;
+    }
+    .filter-bar-container {
+        position: sticky;
+        top: 25px;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sticky {
+        top:0;
+        background-color: aliceblue;
+        width: 100%;
+    }
+}
